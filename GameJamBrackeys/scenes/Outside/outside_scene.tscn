@@ -1,0 +1,175 @@
+[gd_scene load_steps=18 format=3 uid="uid://ddygofde0bqvo"]
+
+[ext_resource type="PackedScene" uid="uid://cfstm7sf7dog3" path="res://scenes/Main/main_scene.tscn" id="1_1bpv4"]
+[ext_resource type="Script" path="res://scenes/Outside/outside_scene.gd" id="2_7r4v5"]
+[ext_resource type="PackedScene" uid="uid://dqk463cd2r3lk" path="res://UI/ui.tscn" id="2_556dj"]
+[ext_resource type="Texture2D" uid="uid://c215tvulg40hf" path="res://graphics/ground/dirt.png" id="3_0r3su"]
+[ext_resource type="Texture2D" uid="uid://goeyuvbaht60" path="res://graphics/tilesets/outside_walls.png" id="4_jd1kg"]
+[ext_resource type="PackedScene" uid="uid://dnn8a3xiwa8vy" path="res://scenes/Gate/gate.tscn" id="5_nyr6m"]
+[ext_resource type="FontFile" uid="uid://ctu5o6xevnus1" path="res://graphics/lights/kenney_ui-pack/Font/kenvector_future.ttf" id="7_8rbl4"]
+[ext_resource type="Texture2D" uid="uid://bldd1sq1jpvt3" path="res://graphics/objects/infestations/large.png" id="8_16g4l"]
+[ext_resource type="Texture2D" uid="uid://rrqaq8d7fnoy" path="res://graphics/objects/infestations/line.png" id="9_s75in"]
+[ext_resource type="Texture2D" uid="uid://cshx6xf4djswy" path="res://graphics/objects/infestations/small.png" id="10_lkbyq"]
+[ext_resource type="Texture2D" uid="uid://q8h4b8h57sbv" path="res://graphics/objects/infestations/small_2.png" id="11_s1vmt"]
+[ext_resource type="Texture2D" uid="uid://bajtcm8grawcs" path="res://graphics/objects/infestations/spikes.png" id="12_3q6uy"]
+[ext_resource type="Texture2D" uid="uid://dgos2qk2nt5d3" path="res://graphics/objects/infestations/small_4.png" id="13_ptvct"]
+[ext_resource type="Texture2D" uid="uid://db122ll0p8rhr" path="res://graphics/objects/infestations/small_3.png" id="14_o4jvg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0tju"]
+resource_name = "Outside Walls"
+texture = ExtResource("4_jd1kg")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-67.8822, -65.0538, 50.9117, -64.3467, 56, -59, 195, -58, 195, 57.9827, 57.9828, 59.397, 54.4472, 62.9325, -67.1752, 62.2254)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(195, 57.9827, -195, 58, -195, -57.9827, 195, -57.9828)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(67.8822, 65.0538, -50.9117, 64.3467, -56, 59, -195, 58, -195, -57.9827, -57.9828, -59.397, -54.4472, -62.9325, 67.1752, -62.2254)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(57.9827, 195, 62, -66, -61, -64, -57.9828, 195)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-57.9827, 195, -59, 82.5, -59.5, 60.5, -65, 60.5, -63, -64, 57.2757, -62.2254, 60.8112, -58.6899, 86.9741, -57.9828, 195, -58, 195, 57.9827, 59.397, 58.6899, 57.9828, 195)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, -57.9827, -82.5, -59, -60.5, -59.5, -60.5, -65, 59.397, -66.468, 62.2254, 57.2757, 58.6899, 60.8112, 57.9828, 86.9741, 58, 195, -57.9827, 195, -58.6899, 59.397, -195, 57.9828)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(57.9827, 195, 58, -195, -57.9827, -195, -57.9828, 195)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(195, 57.9827, 82.5, 59, 60.5, 59.5, 60.5, 65, -64, 63, -62.2254, -57.2757, -58.6899, -60.8112, -57.9828, -86.9741, -58, -195, 57.9827, -195, 58.6899, -59.397, 195, -57.9828)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(57.9827, -195, 60.8112, 62.9325, -57.2757, 62.2254, -60.8112, 58.6899, -86.9741, 57.9828, -195, 58, -195, -57.9827, -59.397, -58.6899, -57.9828, -195)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(57.9827, -195, 62, 44, -62, 46, -57.9828, -195)
+
+[sub_resource type="TileSet" id="TileSet_mtvfu"]
+tile_size = Vector2i(390, 390)
+physics_layer_0/collision_layer = 16
+physics_layer_0/collision_mask = 15
+sources/3 = SubResource("TileSetAtlasSource_v0tju")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lpynd"]
+font = ExtResource("7_8rbl4")
+font_size = 26
+
+[node name="OutsideScene" instance=ExtResource("1_1bpv4")]
+script = ExtResource("2_7r4v5")
+
+[node name="UI" parent="." index="0" instance=ExtResource("2_556dj")]
+
+[node name="Ground" type="Node2D" parent="." index="1"]
+
+[node name="Dirt" type="Sprite2D" parent="Ground" index="0"]
+texture_repeat = 3
+position = Vector2(443, 447)
+texture = ExtResource("3_0r3su")
+region_enabled = true
+region_rect = Rect2(-1096.39, -1093.09, 2978, 2484.91)
+
+[node name="TileMap" type="TileMap" parent="Ground" index="1"]
+position = Vector2(-1, 0)
+tile_set = SubResource("TileSet_mtvfu")
+format = 2
+layer_0/tile_data = PackedInt32Array(131072, 3, 2, 65536, 3, 2, 0, 3, 2, -65536, 3, 2, 2, 3, 2, 65538, 3, 2, 131074, 3, 2, -65534, 3, 2, 196608, 65539, 2, 196610, 131075, 2, 196609, 65539, 0, -131072, 131075, 1, -131070, 65539, 1, -131069, 65539, 0, -131068, 65539, 0, -65537, 65539, 0, -65538, 65539, 0)
+
+[node name="Projectiles" type="Node2D" parent="." index="2"]
+
+[node name="Infestations" type="StaticBody2D" parent="." index="3"]
+collision_layer = 4
+
+[node name="Large" type="Sprite2D" parent="Infestations" index="0"]
+position = Vector2(315, 1230)
+texture = ExtResource("8_16g4l")
+
+[node name="Line" type="Sprite2D" parent="Infestations" index="1"]
+position = Vector2(542, 1287)
+rotation = -1.5708
+texture = ExtResource("9_s75in")
+
+[node name="Small" type="Sprite2D" parent="Infestations" index="2"]
+position = Vector2(763, 1261)
+rotation = 0.545596
+texture = ExtResource("10_lkbyq")
+
+[node name="Small2" type="Sprite2D" parent="Infestations" index="3"]
+position = Vector2(797, 1283)
+texture = ExtResource("11_s1vmt")
+
+[node name="Line2" type="Sprite2D" parent="Infestations" index="4"]
+position = Vector2(277, 593)
+texture = ExtResource("9_s75in")
+
+[node name="Line3" type="Sprite2D" parent="Infestations" index="5"]
+position = Vector2(269, 244)
+texture = ExtResource("9_s75in")
+
+[node name="Spikes" type="Sprite2D" parent="Infestations" index="6"]
+position = Vector2(1057, -500)
+texture = ExtResource("12_3q6uy")
+
+[node name="Small4" type="Sprite2D" parent="Infestations" index="7"]
+position = Vector2(177, -666)
+texture = ExtResource("13_ptvct")
+
+[node name="Small3" type="Sprite2D" parent="Infestations" index="8"]
+position = Vector2(149, -703)
+texture = ExtResource("14_o4jvg")
+
+[node name="Small5" type="Sprite2D" parent="Infestations" index="9"]
+position = Vector2(958, -681)
+rotation = 1.97252
+texture = ExtResource("10_lkbyq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Infestations" index="10"]
+polygon = PackedVector2Array(261, 1192, 282, 1171, 321, 1160, 355, 1171, 377, 1201, 376, 1228, 376, 1258, 375, 1272, 395, 1272, 429, 1269, 458, 1273, 484, 1275, 522, 1273, 557, 1265, 580, 1271, 608, 1271, 624, 1276, 641, 1273, 662, 1279, 688, 1271, 703, 1271, 715, 1275, 729, 1280, 746, 1258, 755, 1239, 778, 1219, 793, 1219, 796, 1233, 793, 1255, 809, 1256, 815, 1272, 816, 1295, 800, 1310, 744, 1305, 704, 1307, 628, 1310, 581, 1305, 549, 1306, 491, 1304, 454, 1303, 418, 1303, 387, 1308, 292, 1298, 252, 1275, 242, 1249, 251, 1231)
+
+[node name="Player" parent="." index="4"]
+position = Vector2(592, 592)
+rotation = -1.64934
+
+[node name="Gate" parent="." index="5" instance=ExtResource("5_nyr6m")]
+position = Vector2(502, -1429)
+
+[node name="Instructions" type="Node" parent="." index="6"]
+
+[node name="Label" type="Label" parent="Instructions" index="0"]
+offset_left = -178.0
+offset_top = 210.0
+offset_right = 116.0
+offset_bottom = 648.0
+text = "Get inside the building to know what's behind the door. "
+label_settings = SubResource("LabelSettings_lpynd")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Instructions" index="1"]
+offset_left = 1036.0
+offset_top = -444.0
+offset_right = 1330.0
+offset_bottom = -6.0
+text = "Get out of the building alive!!"
+label_settings = SubResource("LabelSettings_lpynd")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="player_entered" from="Gate" to="." method="_on_gate_player_entered"]

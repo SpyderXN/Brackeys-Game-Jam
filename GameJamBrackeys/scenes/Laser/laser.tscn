@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnl23ns0yo0p7"]
+
+[ext_resource type="Script" path="res://scenes/Laser/laser.gd" id="1_fs1y8"]
+[ext_resource type="Texture2D" uid="uid://cjc2100ia14x2" path="res://graphics/Projectile/blue.png" id="1_qlp3c"]
+[ext_resource type="AudioStream" uid="uid://bs347o7aqyhlm" path="res://Audio/mixkit-short-laser-gun-shot-1670.wav" id="3_g80kf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_obc1u"]
+radius = 5.0
+height = 88.0
+
+[node name="Laser" type="Area2D"]
+collision_layer = 2
+collision_mask = 28
+script = ExtResource("1_fs1y8")
+speed = 1000
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_obc1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 40)
+texture = ExtResource("1_qlp3c")
+
+[node name="LaserVisibileTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_g80kf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="LaserVisibileTimer" to="." method="_on_laser_visibile_timer_timeout"]

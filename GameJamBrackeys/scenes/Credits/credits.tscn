@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://fwl3cggqrcuo"]
+
+[ext_resource type="Script" path="res://scenes/Credits/credits.gd" id="1_jxuyr"]
+[ext_resource type="Texture2D" uid="uid://d3tbb13h16417" path="res://91657.jpg" id="1_l8bxf"]
+[ext_resource type="FontFile" uid="uid://ctu5o6xevnus1" path="res://graphics/lights/kenney_ui-pack/Font/kenvector_future.ttf" id="2_hjg7h"]
+[ext_resource type="Texture2D" uid="uid://cbn3xid8ryp4i" path="res://graphics/lights/kenney_ui-pack/PNG/yellow_button01.png" id="3_vf6ji"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ekgna"]
+font = ExtResource("2_hjg7h")
+font_size = 66
+
+[sub_resource type="LabelSettings" id="LabelSettings_2tq8i"]
+font = ExtResource("2_hjg7h")
+font_size = 36
+
+[node name="Credits" type="CanvasLayer"]
+script = ExtResource("1_jxuyr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l8bxf")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 317.0
+offset_top = 122.0
+offset_right = 1525.0
+offset_bottom = 902.0
+text = "Game made for brackeys game jam 2024.1
+
+Made by SpyderX Games"
+label_settings = SubResource("LabelSettings_ekgna")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+offset_left = 121.0
+offset_top = 90.0
+offset_right = 377.0
+offset_bottom = 175.0
+icon = ExtResource("3_vf6ji")
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -25.5
+offset_right = 122.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_2tq8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
